@@ -34,7 +34,7 @@ function FoodList(props) {
             <div className="text-center">
               <Link
                 className="btn btn-outline-dark rtab-detail-button"
-                to="/item"
+                to={`/item/${food.slug}`}
               >
                 See more detail
               </Link>

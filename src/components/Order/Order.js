@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Order.css";
 import axios from "axios";
-axios.defaults.withCredentials = true;
 import avt from "../../assets/images/user/avt/001.jpg";
+axios.defaults.withCredentials = true;
 function Order(props) {
   const [orders, setOrders] = useState([]);
 

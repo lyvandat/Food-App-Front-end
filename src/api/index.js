@@ -1,6 +1,6 @@
 import axios from "axios";
-axios.defaults.withCredentials = true;
 import CookieService from "../services/CookieService";
+axios.defaults.withCredentials = true;
 
 // const URL = "http://localhost:5000";
 const URL = "https://food-market-api.onrender.com";

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 import axios from "axios";
-axios.defaults.withCredentials = true;
 import { Link } from "react-router-dom";
 
 import sunrise_logo from "../../assets/images/logo/SunriseFoods-logo.png";
@@ -18,6 +17,7 @@ import {
   MdAttachMoney,
   MdOutlineRefresh,
 } from "react-icons/md";
+axios.defaults.withCredentials = true;
 
 const restaurant_logo = [
   { img: sunrise_logo, name: "Sunrise Foods", link: "#" },

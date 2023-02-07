@@ -44,7 +44,7 @@ const AddItem = () => {
     formData.append("photo", photo);
     formData.append("des", des); // chưa có
     const response = await axios.post(
-      "https://food-market-api.onrender.com/api/v1/products",
+      "http://localhost:5000/api/v1/products",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },

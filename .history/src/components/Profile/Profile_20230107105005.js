@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./style.css";
 
-const URL = "https://food-market-api.onrender.com";
+const URL = "http://localhost:5000";
 
 function Profile(props) {
   console.log(props);

@@ -2,8 +2,7 @@ import axios from "axios";
 
 import CookieService from "../services/CookieService";
 
-// const URL = "http://localhost:5000";
-const URL = "https://food-market-api.onrender.com";
+const URL = "http://localhost:5000";
 
 export const GetRandom = (arr, n) => {
   var result = new Array(n),
@@ -21,7 +20,7 @@ export const GetRandom = (arr, n) => {
 
 export const fetchProducts = (options = {}) => {
   //const query = options ? `?name=${options}` : '';
-  const query = "";
+  const query = '';
 
   return axios.get(`${URL}/api/v1/products${query}`);
 };
@@ -50,7 +49,7 @@ export const fetchProductDetail = (slug) => {
 
 export const deteteProduct = (id) => {
   return axios.delete(`${URL}/api/v1/products/${id}/delete`);
-};
+}
 
 // =======================================================
 
@@ -63,7 +62,7 @@ export const fetchUsers = () => {
 };
 
 export const fetchSortUser = (options) => {
-  let sortBy = "";
+  let sortBy = '';
   for (const key in options) {
     if (Object.hasOwnProperty.call(options, key)) {
       if (options[key]) {
@@ -73,7 +72,7 @@ export const fetchSortUser = (options) => {
   }
 
   return axios.get(`${URL}/api/v1/users/?sort=${sortBy}`);
-};
+}
 
 export const createUser = function (data) {
   axios
@@ -97,17 +96,17 @@ export const loginWithJwt = function (data) {
     .catch(console.error());
 };
 
-export const banUser = function (user) {
+export const banUser = function(user) {
   return axios.patch(`${URL}/api/v1/admin/ban/${user._id}`);
-};
+}
 
-export const unbanUser = function (user) {
+export const unbanUser = function(user) {
   return axios.patch(`${URL}/api/v1/admin/unban/${user._id}`);
-};
+}
 
-export const toSeller = function (_id) {
+export const toSeller = function(_id) {
   return axios.patch(`${URL}/api/v1/users/${_id}/to-seller`);
-};
+}
 
 // =======================================================
 

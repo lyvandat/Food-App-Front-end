@@ -7,13 +7,11 @@ function Order(props) {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://food-market-api.onrender.com/api/v1/orders")
-      .then((response) => {
-        console.log("fetch orders");
-        console.log(response);
-        setOrders(response.data.data.orders);
-      });
+    axios.get("http://localhost:5000/api/v1/orders").then((response) => {
+      console.log("fetch orders");
+      console.log(response);
+      setOrders(response.data.data.orders);
+    });
   }, []);
 
   function ItemsInOrder(product) {

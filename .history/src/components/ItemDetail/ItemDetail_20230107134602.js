@@ -16,7 +16,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 const MENU_TYPE = { SMALL: 0, LARGE: 1 };
-const URL = "https://food-market-api.onrender.com";
+const URL = "http://localhost:5000";
 
 function changeSellectToInput() {
   if ($("#qty-itdetail").find(":selected").val() === "many")

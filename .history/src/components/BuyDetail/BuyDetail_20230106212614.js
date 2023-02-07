@@ -9,7 +9,7 @@ import visa_icon from "../../assets/images/icons/visa.png";
 import React from "react";
 import axios from "axios";
 
-const URL = "https://food-market-api.onrender.com";
+const URL = "http://localhost:5000";
 
 // const items = [
 //   {

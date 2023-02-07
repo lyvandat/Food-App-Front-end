@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+axios.defaults.withCredentials = true;
 import "./style.css";
 
 const URL = "https://food-market-api.onrender.com";

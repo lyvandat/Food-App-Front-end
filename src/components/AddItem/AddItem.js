@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 import axios from "axios";
+axios.defaults.withCredentials = true;
 import { Link } from "react-router-dom";
 
 import sunrise_logo from "../../assets/images/logo/SunriseFoods-logo.png";

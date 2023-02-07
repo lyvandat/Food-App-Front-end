@@ -8,7 +8,7 @@ import cod_icon from "../../assets/images/icons/cod.png";
 import visa_icon from "../../assets/images/icons/visa.png";
 import React from "react";
 import axios from "axios";
-
+axios.defaults.withCredentials = true;
 const URL = "https://food-market-api.onrender.com";
 
 // const items = [

@@ -1,5 +1,5 @@
 import axios from "axios";
-
+axios.defaults.withCredentials = true;
 import CookieService from "../services/CookieService";
 
 // const URL = "http://localhost:5000";

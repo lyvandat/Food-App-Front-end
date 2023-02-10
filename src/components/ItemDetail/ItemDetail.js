@@ -14,7 +14,6 @@ import { useEffect, useState } from "react";
 import { fetchRecommend, fetchProductDetail } from "../../api";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-axios.defaults.withCredentials = true;
 const MENU_TYPE = { SMALL: 0, LARGE: 1 };
 const URL = "https://food-market-api.onrender.com";
 
@@ -94,12 +93,18 @@ const ItemDetail = () => {
       //   },
       // });
 
-      const response = await axios.patch(`${URL}/api/v1/products/${slug}`, {
-        quantity: quantityInputValue,
-        price,
-        type: "add",
-        productId,
-      });
+      const response = await axios.patch(
+        `${URL}/api/v1/products/${slug}`,
+        {
+          quantity: quantityInputValue,
+          price,
+          type: "add",
+          productId,
+        },
+        {
+          withCredentials: true,
+        }
+      );
 
       // const response = await axios.get(`${URL}/api/v1/products`);
       // console.log(response);

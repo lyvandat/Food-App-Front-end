@@ -48,6 +48,8 @@ async function addItemToCart(cart, prod) {
 }
 
 const ItemDetail = () => {
+  axios.defaults.withCredentials = true;
+
   let [recommend, setRecommend] = useState([]);
   let [food, setFood] = useState(null);
 
@@ -93,7 +95,6 @@ const ItemDetail = () => {
       //   },
       // });
 
-      axios.defaults.withCredentials = true;
       const response = await axios.patch(
         `${URL}/api/v1/products/${slug}`,
         {

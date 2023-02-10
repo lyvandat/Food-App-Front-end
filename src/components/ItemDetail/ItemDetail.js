@@ -93,6 +93,7 @@ const ItemDetail = () => {
       //   },
       // });
 
+      axios.defaults.withCredentials = true;
       const response = await axios.patch(
         `${URL}/api/v1/products/${slug}`,
         {

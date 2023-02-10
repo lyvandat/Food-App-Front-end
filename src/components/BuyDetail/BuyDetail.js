@@ -8,7 +8,6 @@ import cod_icon from "../../assets/images/icons/cod.png";
 import visa_icon from "../../assets/images/icons/visa.png";
 import React from "react";
 import axios from "axios";
-axios.defaults.withCredentials = true;
 const URL = "https://food-market-api.onrender.com";
 
 // const items = [
@@ -155,14 +154,24 @@ const BuyDetail = function (props) {
       return;
     }
 
-    const response = await axios.post(`${URL}/api/v1/orders`, {
-      name: nameValue,
-      phone: phoneValue,
-      address: addressValue,
-      note: noteValue,
-      payment: paymentValue,
-      products: items,
-    });
+    const response = await axios.post(
+      `${URL}/api/v1/orders`,
+      {
+        name: nameValue,
+        phone: phoneValue,
+        address: addressValue,
+        note: noteValue,
+        payment: paymentValue,
+        products: items,
+      },
+      {
+        withCredentials: true,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     console.log(response);
     alert("successfully");
